@@ -16,6 +16,14 @@
     {
       "type": "test",
       "action": "add"
+    },
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "manual-tm",
+        "uri": "./manual/tm.txt"
+      }
     }
   ],
   "output": [
@@ -64,6 +72,14 @@
       "args": {
         "outputName": "geoip-only-tm.dat",
         "wantedList": ["tm"]
+      }
+    },
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "outputName": "geoip-manual-tm.dat",
+        "wantedList": ["manual-tm"]
       }
     },
     {

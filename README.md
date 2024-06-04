@@ -1,4 +1,5 @@
-use: ./start.sh
+usage: ./start.sh
+
 Original: https://github.com/v2fly/geoip
 
 
