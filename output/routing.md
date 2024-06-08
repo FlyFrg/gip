@@ -267,16 +267,16 @@ preffered=global_proxy
         ],
         "outboundTag": "proxy"
       },
-      { // под капотом проксирование вовне
+      { // Кастомные настройки из Proxy, присутствует только если поле не пустое
         "domain": [
-          "geosite:geolocation-!cn"
+          "geosite:geolocation-proxy-custom"
         ],
         "outboundTag": "proxy"
       },
-      { // под капотом direct mainland
+      { // Кастомные настройки из Direct, присутствует только если поле не пустое
         "domain": [
-          "geosite:cn",
-          "geosite:geolocation-cn"
+          "geosite:direct-custom",
+          "geosite:geolocation-direct-custom"
         ],
         "outboundTag": "direct"
       },
@@ -290,25 +290,31 @@ preffered=global_proxy
         "ip": [
           "geoip:private"
         ],
-        "outboundTag": "direct"
+        "outboundTag": "direct" // Подставляется по правилу (global_proxy||bypass_mainland?proxy:direct)
       },
-      {
+      { // Присутствует только по условию (global_direct||bypass_mainland||bypass_lan_mainland)
         "ip": [
-          "geoip:cn"
+          "geoip:cn" // Подставляется (geoip:<user_country.iso2>)
         ],
         "outboundTag": "direct"
       },
-      {
+      { // Присутствует только по условию (global_direct||bypass_mainland||bypass_lan_mainland)
         "domain": [
-          "geosite:cn"
+          "geosite:cn" // Подставляется (geosite:<user_country.iso2>)
         ],
         "outboundTag": "direct"
       },
-      {
+      { // Присутствует только по условию (global_direct||bypass_mainland||bypass_lan_mainland)
         "domain": [
-          "geosite:geolocation-cn"
+          "geosite:geolocation-cn" // Подставляется (geosite:geolocation-<user_country.iso2>)
         ],
         "outboundTag": "direct"
+      },
+      { // кастомные настройки Blocked, присутствует только если поле не пустое
+        "domain": [
+          "geosite:blocked"
+        ],
+        "outboundTag": "block"
       },
       {
         "outboundTag": "proxy",
