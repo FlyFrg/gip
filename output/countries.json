@@ -1,0 +1,27 @@
+{
+    "ru": {
+        "name": "Russia",
+        "remotedns": "1.1.1.1",
+        "domesticdns": "77.88.8.8"
+    },
+    "cn": {
+        "name": "China",
+        "remotedns": "1.1.1.1",
+        "domesticdns": "223.5.5.5"
+    },
+    "tm": {
+        "name": "Turkmenistan",
+        "remotedns": "1.1.1.1",
+        "domesticdns": "217.174.227.242"
+    },
+    "ir": {
+        "name": "Iran",
+        "remotedns": "1.1.1.1",
+        "domesticdns": "89.184.203.1"
+    },
+    "other": {
+        "name": "Other",
+        "remotedns": "1.1.1.1",
+        "domesticdns": "8.8.8.8"
+    }
+}
