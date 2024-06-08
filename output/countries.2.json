@@ -1,0 +1,33 @@
+{
+    "ru": {
+        "name": "Russia",
+        "dns": "77.88.8.8",
+        "geoipurl":"https://github.com/FlyFrg/gsite/releases/latest/download/dlc-ru.dat",
+        "geositeurl":"https://github.com/FlyFrg/gip/releases/latest/download/geoip-ru.dat"
+    },
+    "cn": {
+        "name": "China",
+        "dns": "223.5.5.5",
+        "geoipurl":"https://github.com/FlyFrg/gsite/releases/latest/download/dlc-cn.dat",
+        "geositeurl":"https://github.com/FlyFrg/gip/releases/latest/download/geoip-cn.dat"
+    },
+    "tm": {
+        "name": "Turkmenistan",
+        "dns": "217.174.227.242",
+        "geoipurl":"https://github.com/FlyFrg/gsite/releases/latest/download/dlc-tm.dat",
+        "geositeurl":"https://github.com/FlyFrg/gip/releases/latest/download/geoip-tm.dat"
+    },
+    "ir": {
+        "name": "Iran",
+        "dns": "89.184.203.1",
+        "geoipurl":"https://github.com/FlyFrg/gsite/releases/latest/download/dlc-ir.dat",
+        "geositeurl":"https://github.com/FlyFrg/gip/releases/latest/download/geoip-ir.dat"
+    },
+    "other": {
+        "name": "Other",
+        "remotedns": "1.1.1.1",
+        "geoipurl":"https://github.com/FlyFrg/gsite/releases/latest/download/dlc.dat",
+        "geositeurl":"https://github.com/FlyFrg/gip/releases/latest/download/geoip.dat"
+    }
+}
+

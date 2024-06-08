@@ -1,0 +1,26 @@
+{
+  "dns": {
+    "servers": [
+      "223.5.5.5",
+      {
+        "address": "223.5.5.5",
+        "domains": [
+          "geosite:!ru",
+          "geosite:geolocation-!ru"
+        ],
+        "port": 53
+      },
+      {
+        "address": "77.88.8.8",
+        "domains": [
+          "geosite:ru",
+          "geosite:geolocation-ru"
+        ],
+        "expectIPs": [
+          "geoip:ru"
+        ],
+        "port": 53
+      }
+    ]
+  }
+}
