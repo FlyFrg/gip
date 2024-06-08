@@ -117,7 +117,6 @@ preffered=global_proxy
 
 Пример для
 user_country=ru
-proxy_country=cn
 preffered=global_proxy
 
 {
@@ -164,4 +163,157 @@ preffered=global_proxy
    }
 }
 
+
+
+Раздел routing
+
+  "routing": {
+    "domainStrategy": "AsIs",  //Из настроек
+    "rules": [
+      { //Из раздела dns выше
+        "ip": [
+          "1.1.1.1"
+        ],
+        "outboundTag": "proxy",
+        "port": "53"
+      },
+      { //Из раздела dns выше
+        "ip": [
+          "223.5.5.5"
+        ],
+        "outboundTag": "direct",
+        "port": "53"
+      },
+      { // для Китая - подмены серверов
+        "domain": [
+          "domain:googleapis.cn"
+        ],
+        "outboundTag": "proxy"
+      },
+      { // под капотом проксирование вовне
+        "domain": [
+          "geosite:geolocation-!<user_country.iso2>"
+        ],
+        "outboundTag": "<(global_direct||bypass_lan_mainland|bypass_mainland?direct:proxy)>"
+      },
+      { // под капотом mainland
+        "domain": [
+          "geosite:<user_country.iso2>",
+          "geosite:geolocation-<user_country.iso2>"
+        ],
+        "outboundTag": "<(global_proxy||bypass_lan?proxy:direct)>"
+      },
+      { //локальный, только почему 137 а не 127?
+        "ip": [
+          "137.0.0.1"
+        ],
+        "outboundTag": "direct"
+      },
+      { //Локальные адреса
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "<(global_proxy||bypass_mainland?proxy:direct)>"
+      },
+      {
+        "ip": [
+          "geoip:<user_country.iso2>"
+        ],
+        "outboundTag": "<(global_proxy||bypass_lan?proxy:direct)>"
+      },
+      {
+        "domain": [
+          "geosite:<user_country.iso2>"
+        ],
+        "outboundTag": "<(global_proxy||bypass_lan?proxy:direct)>"
+      },
+      {
+        "domain": [
+          "geosite:geolocation-cn"
+        ],
+        "outboundTag": "<(global_proxy||bypass_lan?proxy:direct)>"
+      },
+      {
+        "outboundTag": "proxy",
+        "port": "0-65535"
+      }
+    ]
+  }
+
+
+
+
+пример
+  "routing": {
+    "domainStrategy": "AsIs",  //Из настроек
+    "rules": [
+      { //Из раздела dns выше
+        "ip": [
+          "1.1.1.1"
+        ],
+        "outboundTag": "proxy",
+        "port": "53"
+      },
+      { //Из раздела dns выше
+        "ip": [
+          "223.5.5.5"
+        ],
+        "outboundTag": "direct",
+        "port": "53"
+      },
+      { // для Китая - подмены серверов
+        "domain": [
+          "domain:googleapis.cn"
+        ],
+        "outboundTag": "proxy"
+      },
+      { // под капотом проксирование вовне
+        "domain": [
+          "geosite:geolocation-!cn"
+        ],
+        "outboundTag": "proxy"
+      },
+      { // под капотом direct mainland
+        "domain": [
+          "geosite:cn",
+          "geosite:geolocation-cn"
+        ],
+        "outboundTag": "direct"
+      },
+      { //локальный, только почему 137 а не 127?
+        "ip": [
+          "137.0.0.1"
+        ],
+        "outboundTag": "direct"
+      },
+      { //Локальные адреса
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "ip": [
+          "geoip:cn"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "domain": [
+          "geosite:cn"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "domain": [
+          "geosite:geolocation-cn"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "outboundTag": "proxy",
+        "port": "0-65535"
+      }
+    ]
+  }
 
