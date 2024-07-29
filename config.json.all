@@ -1,0 +1,54 @@
+{
+  "input": [
+    {
+      "type": "maxmindGeoLite2CountryCSV",
+      "action": "add",
+      "args": {
+        "country": "./geolite2/GeoLite2-Country-Locations-en.csv",
+        "ipv4": "./geolite2/GeoLite2-Country-Blocks-IPv4.csv",
+        "ipv6": "./geolite2/GeoLite2-Country-Blocks-IPv6.csv"
+      }
+    },
+    {
+      "type": "private",
+      "action": "add"
+    }
+],
+  "output": [
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "outputName": "geoip.dat"
+      }
+    },
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "outputName": "geoip-cn.dat",
+        "wantedList": ["private","cn"]
+      }
+    },
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "outputName": "geoip-ru.dat",
+        "wantedList": ["private","ru"]
+      }
+    },
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "outputName": "geoip-ir.dat",
+        "wantedList": ["private","ir"]
+      }
+    },
+    {
+      "type": "text",
+      "action": "output"
+    }
+  ]
+}

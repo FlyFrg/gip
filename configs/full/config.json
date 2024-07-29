@@ -1,0 +1,106 @@
+{
+  "input": [
+    {
+      "type": "maxmindGeoLite2CountryCSV",
+      "action": "add",
+      "args": {
+        "country": "./geolite2/GeoLite2-Country-Locations-en.csv",
+        "ipv4": "./geolite2/GeoLite2-Country-Blocks-IPv4.csv",
+        "ipv6": "./geolite2/GeoLite2-Country-Blocks-IPv6.csv"
+      }
+    },
+    {
+      "type": "private",
+      "action": "add"
+    },
+    {
+      "type": "test",
+      "action": "add"
+    },
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "manual-tm",
+        "uri": "./manual/tm.txt"
+      }
+    }
+  ],
+  "output": [
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "outputName": "geoip.dat"
+      }
+    },
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "outputName": "geoip-only-cn-private.dat",
+        "wantedList": ["cn", "private"]
+      }
+    },
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "oneFilePerList": true,
+        "wantedList": ["cn", "private", "test"]
+      }
+    },
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "outputName": "geoip-cn.dat",
+        "wantedList": ["cn"]
+      }
+    },
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "outputName": "geoip-ru.dat",
+        "wantedList": ["ru"]
+      }
+    },
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "outputName": "geoip-ir.dat",
+        "wantedList": ["ir"]
+      }
+    },
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "outputName": "geoip-only-tm.dat",
+        "wantedList": ["tm"]
+      }
+    },
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "outputName": "geoip-tm.dat",
+        "wantedList": ["manual-tm"]
+      }
+    },
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "outputName": "geoip-light.dat",
+        "wantedList": ["ru","cn","ir","manual-tm"]
+      }
+    },
+    {
+      "type": "text",
+      "action": "output"
+    }
+  ]
+}

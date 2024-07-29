@@ -12,20 +12,8 @@
     {
       "type": "private",
       "action": "add"
-    },
-    {
-      "type": "test",
-      "action": "add"
-    },
-    {
-      "type": "text",
-      "action": "add",
-      "args": {
-        "name": "manual-tm",
-        "uri": "./manual/tm.txt"
-      }
     }
-  ],
+],
   "output": [
     {
       "type": "v2rayGeoIPDat",
@@ -38,48 +26,24 @@
       "type": "v2rayGeoIPDat",
       "action": "output",
       "args": {
-        "outputName": "geoip-only-cn-private.dat",
-        "wantedList": ["cn", "private"]
+        "outputName": "geoip-cn.dat",
+        "wantedList": ["private","cn"]
       }
     },
     {
       "type": "v2rayGeoIPDat",
       "action": "output",
       "args": {
-        "oneFilePerList": true,
-        "wantedList": ["cn", "private", "test"]
+        "outputName": "geoip-ru.dat",
+        "wantedList": ["private","ru"]
       }
     },
     {
       "type": "v2rayGeoIPDat",
       "action": "output",
       "args": {
-        "outputName": "geoip-only-ru.dat",
-        "wantedList": ["ru"]
-      }
-    },
-    {
-      "type": "v2rayGeoIPDat",
-      "action": "output",
-      "args": {
-        "outputName": "geoip-only-iq.dat",
-        "wantedList": ["iq"]
-      }
-    },
-    {
-      "type": "v2rayGeoIPDat",
-      "action": "output",
-      "args": {
-        "outputName": "geoip-only-tm.dat",
-        "wantedList": ["tm"]
-      }
-    },
-    {
-      "type": "v2rayGeoIPDat",
-      "action": "output",
-      "args": {
-        "outputName": "geoip-manual-tm.dat",
-        "wantedList": ["manual-tm"]
+        "outputName": "geoip-ir.dat",
+        "wantedList": ["private","ir"]
       }
     },
     {

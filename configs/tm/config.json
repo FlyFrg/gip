@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "type": "text",
+      "action": "add",
+      "args": {
+        "name": "tm",
+        "uri": "./manual/tm.txt"
+      }
+    }
+  ],
+  "output": [
+    {
+      "type": "v2rayGeoIPDat",
+      "action": "output",
+      "args": {
+        "outputName": "geoip-tm.dat",
+        "wantedList": ["tm"]
+      }
+    },
+    {
+      "type": "text",
+      "action": "output"
+    }
+  ]
+}

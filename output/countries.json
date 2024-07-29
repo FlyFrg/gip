@@ -8,6 +8,7 @@
         "dnsHosts":{},
         "domesticSites":["geosite:ru", "geosite:geolocation-ru"],
         "domesticIp":["geoip:ru"],
+        "domesticExpectIPs":["geoip:ru"],
         "remoteSites":["geosite:geolocation-!ru"],
         "remoteIp":[]
     },
@@ -22,6 +23,7 @@
         },
         "domesticSites":["geosite:cn", "geosite:geolocation-cn"],
         "domesticIp":["geoip:cn"],
+        "domesticExpectIPs":["geoip:cn"],
         "remoteSites":["geosite:geolocation-!cn"],
         "remoteIp":[]
     },
@@ -33,6 +35,7 @@
         "geositeurl":"https://github.com/FlyFrg/gip/releases/latest/download/geoip-tm.dat",
         "domesticSites":["geosite:tm", "geosite:geolocation-tm"],
         "domesticIp":["geoip:tm"],
+        "domesticExpectIPs":["geoip:tm"],
         "remoteSites":["geosite:geolocation-!tm"],
         "remoteIp":[]
     },
@@ -44,6 +47,7 @@
         "geositeurl":"https://github.com/FlyFrg/gip/releases/latest/download/geoip-ir.dat",
         "domesticSites":["geosite:ir", "geosite:geolocation-ir"],
         "domesticIp":["geoip:ir"],
+        "domesticExpectIPs":["geoip:it"],
         "remoteSites":["geosite:geolocation-!ir"],
         "remoteIp":[]
     },
@@ -52,7 +56,12 @@
         "remoteDns": "1.1.1.1",
         "domesticDns": "8.8.8.8",
         "geoipurl":"https://github.com/FlyFrg/gsite/releases/latest/download/dlc.dat",
-        "geositeurl":"https://github.com/FlyFrg/gip/releases/latest/download/geoip.dat"
+        "geositeurl":"https://github.com/FlyFrg/gip/releases/latest/download/geoip.dat",
+        "domesticSites":[],
+        "domesticIp":[],
+        "domesticExpectIPs":[],
+        "remoteSites":[],
+        "remoteIp":[]
     }
 }
 
