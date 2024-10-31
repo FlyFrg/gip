@@ -1,0 +1,41 @@
+{
+  "cn": {
+    "name": "China",
+    "remoteDns": "1.1.1.1",
+    "domesticDns": "223.5.5.5",
+    "geoipurl":"https://github.com/v2fly/geoip/releases/latest/download/geoip.dat",
+    "geositeurl":"https://github.com/v2fly/domain-list-community/releases/latest/download/dlc.dat",
+    "dnsHosts":{
+      "domain:googleapis.cn": "googleapis.com"
+    },
+    "domesticSites":["geosite:cn", "geosite:geolocation-cn"],
+    "domesticIp":["geoip:cn"],
+    "domesticExpectIPs":["geoip:cn"],
+    "remoteSites":["geosite:geolocation-!cn"],
+    "remoteIp":[]
+  },
+  "tm": {
+    "name": "Turkmenistan",
+    "remoteDns": "1.1.1.1",
+    "domesticDns": "217.174.227.242",
+    "geoipurl":"https://github.com/FlyFrg/gip/releases/latest/download/geoip-tm.dat",
+    "geositeurl":"https://github.com/FlyFrg/gsite/releases/latest/download/dlc-tm.dat",
+    "domesticSites":["geosite:tm", "geosite:geolocation-tm"],
+    "domesticIp":["geoip:tm"],
+    "domesticExpectIPs":["geoip:tm"],
+    "remoteSites":["geosite:geolocation-!tm"],
+    "remoteIp":[]
+  },
+  "other": {
+    "name": "Other",
+    "remoteDns": "1.1.1.1",
+    "domesticDns": "8.8.8.8",
+    "geoipurl":"https://github.com/FlyFrg/gip/releases/latest/download/geoip.dat",
+    "geositeurl":"https://github.com/FlyFrg/gsite/releases/latest/download/dlc.dat",
+    "domesticSites":[],
+    "domesticIp":[],
+    "domesticExpectIPs":[],
+    "remoteSites":[],
+    "remoteIp":[]
+  }
+}
